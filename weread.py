@@ -138,16 +138,18 @@ def get_callout(content, style, colorStyle, reviewId):
         emoji = "✍️"
     color = "default"
     # 根据划线颜色设置文字的颜色
-    # if colorStyle == 1:
-    #     color = "red"
-    # elif colorStyle == 2:
-    #     color = "purple"
-    # elif colorStyle == 3:
-    #     color = "blue"
-    # elif colorStyle == 4:
-    #     color = "green"
+    if colorStyle == 1:
+        color = "red"
+    elif colorStyle == 2:
+        color = "purple"
+    elif colorStyle == 3:
+        color = "blue"
+    elif colorStyle == 4:
+        color = "green"
+    # 黄色划线保存默认的黑色
     # elif colorStyle == 5:
     #     color = "yellow"
+        
     return {
         "type": "callout",
         "callout": {
